@@ -1,4 +1,4 @@
-const inneficientStart = () => {
+const start = () => {
   const api = fetch('https://random-words-api.vercel.app/word');
 
   api
@@ -20,13 +20,11 @@ const inneficientStart = () => {
         console.log(def['0']['word']);
         if (document.getElementById('userGuess').value == def['0']['word']) {
           console.log('right answer');
-          juicyfunction();
+          start();
         } else {
           console.log('try again');
-          juicyfunction();
+          start();
         }
       };
     });
 };
-
-inneficientStart();
