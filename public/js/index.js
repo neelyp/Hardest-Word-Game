@@ -1,5 +1,3 @@
-'use strict';
-
 const inneficientStart = () => {
   const api = fetch('https://random-words-api.vercel.app/word');
 
