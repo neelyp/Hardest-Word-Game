@@ -22,7 +22,7 @@ const start = () => {
           console.log('right answer');
           start();
         } else {
-          console.log('try again');
+          console.log('wrong');
           start();
         }
       };
