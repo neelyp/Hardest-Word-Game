@@ -1,8 +1,8 @@
 {
-  "name": "dictionary-game",
+  "name": "hardest-word-game",
   "version": "1.0.0",
   "description": "A game where you have to guess what word the given definition is.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
