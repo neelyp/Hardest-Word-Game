@@ -1,10 +1,10 @@
 {
   "name": "hardest-word-game",
   "version": "1.0.0",
-  "description": "A game where you have to guess what word the given definition is.",
+  "description": "A game where you have to guess what word corresponds to the given definition.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +12,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }

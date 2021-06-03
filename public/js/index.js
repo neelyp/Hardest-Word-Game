@@ -16,8 +16,6 @@ const start = () => {
       definitionText.innerHTML = `Definition: ${definition}`;
 
       submit.onclick = () => {
-        console.log(document.getElementById('userGuess').value);
-        console.log(def['0']['word']);
         if (document.getElementById('userGuess').value == def['0']['word']) {
           console.log('right answer');
           start();
