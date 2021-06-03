@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.text-box {
+  height: 20px;
+  width: 200px;
+  border-radius: 6px;
+  background-color: whitesmoke;
+  color: #4b724bad;
+}
+
+.spinny {
+  animation: spinny 0.7s linear infinite;
+}
+
+@keyframes spinny {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  position: fixed;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader.hidden {
+  animation: fade-out 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-out {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loader > img {
+  width: 300px;
+  height: 300px;
+}

@@ -6,19 +6,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>World's Hardest Word Game</title>
 	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="/js/websiteLoader.js"></script>
 </head>
 
 <body onload="start()">
+	<div class="loader">
+		<p><i class="fas fa-circle-notch spinny loading"></i> Loading...</p>
+		<br>
+	</div>
 	<div style="text-align: center;">
-		<p id="def">Loading...</p>
-
+		<p id="def"></p>
 		<span>
-			<input type="text" id="userGuess" placeholder="Enter word here...">
+			<input type="text" id="userGuess" class="text-box" placeholder="Enter word here...">
 			<input type="button" value="submit" id="submit">
 		</span>
 	</div>
-
-	<script defer src="/js/index.js"></script>
+	<script src="/js/index.js"></script>
 </body>
 
 </html>
