@@ -51,3 +51,23 @@ body {
   width: 300px;
   height: 300px;
 }
+
+.credit {
+	position:absolute;
+	bottom: 1px;
+	left: 50px;
+	right: 50px;
+	text-align: center;
+}
+
+a {
+	font-weight: bold;
+	-webkit-transition: color 1s;
+	transition: color 1s;
+	text-decoration: none;
+	color: #0000ff;
+}
+
+a:hover {
+	color: #c2b861;
+}
