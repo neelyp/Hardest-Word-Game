@@ -1,69 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 
-
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
 .top {
-	margin-bottom: 5%;
-	margin-left: 2%;
-	overflow: hidden;
+  margin-bottom: 5%;
+  margin-left: 2%;
+  overflow: hidden;
 }
 
 .top p {
-	display: inline-block;
-  margin:0;
+  display: inline-block;
+  margin: 0;
 }
 
 .head {
-	font: "Roboto Mono";
-	font-size: 3em;
-	font-weight: 900;
-	margin-right: 5%;
-	font-stretch: expanded;
+  font: 'Roboto Mono';
+  font-size: 3em;
+  font-weight: 900;
+  margin-right: 5%;
+  font-stretch: expanded;
 }
 
 .head:hover span {
-	display: none;
+  display: none;
 }
 
 .head:hover:before {
-	content: "Formidable Lexicon";
+  content: 'Formidable Lexicon';
 }
-
 
 .text-box {
   height: 70%;
   width: 15%;
   border-radius: 0.3em;
-  background-color: #EDF6FF;
-	border: none;
-	outline: none;
-	padding: 0.7em;
-	font-family: 'Source Sans Pro', sans-serif;
+  background-color: #edf6ff;
+  border: none;
+  outline: none;
+  padding: 0.7em;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .guessButton {
-	height: 70%;
+  height: 70%;
   width: auto;
   border-radius: 0.3em;
-  background-color: #EDF6FF;
-	border: none;
-	outline: none;
-	padding: 0.7em;
-	font-family: 'Source Sans Pro', sans-serif;
+  background-color: #edf6ff;
+  border: none;
+  outline: none;
+  padding: 0.7em;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .guessButton:hover {
-	height: 70%;
+  height: 70%;
   width: auto;
   border-radius: 0.3em;
   background-color: #a3d3ff;
-	border: none;
-	outline: none;
-	padding: 0.7em;
-	font-family: 'Source Sans Pro', sans-serif;
+  border: none;
+  outline: none;
+  padding: 0.7em;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .spinny {
@@ -107,21 +105,21 @@ body {
 }
 
 .credit {
-	position:absolute;
-	bottom: 1px;
-	left: 50px;
-	right: 50px;
-	text-align: center;
+  position: absolute;
+  bottom: 1px;
+  left: 50px;
+  right: 50px;
+  text-align: center;
 }
 
 a {
-	font-weight: bold;
-	-webkit-transition: color 1s;
-	transition: color 1s;
-	text-decoration: none;
-	color: #0000ff;
+  font-weight: bold;
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  text-decoration: none;
+  color: #0000ff;
 }
 
 a:hover {
-	color: #c2b861;
+  color: #c2b861;
 }

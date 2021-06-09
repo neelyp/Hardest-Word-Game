@@ -1,14 +1,19 @@
 from flask import Flask, render_template, send_file
 import os
-app = Flask('app')
 
-@app.route('/')
+app = Flask("app")
+
+
+@app.route("/")
 def home():
-	api = os.environ['API']
-	return render_template('index.html', api=api)
+    api = os.environ["API"]
+    return render_template("index.html", api=api)
 
-@app.route('/favicon.ico')
+
+@app.route("/favicon.ico")
 def favicon():
-	return send_file('./static/img/favicon/favicon.ico')
+    return send_file("./static/img/favicon/favicon.ico")
 
-app.run(host='0.0.0.0', port=8080)
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080)
