@@ -1,6 +1,5 @@
 const start = () => {
-	const api = fetch('https://random-words-api.vercel.app/word');
-
+	const api = fetch(apiUrl);
 	api
 		.then((response) => {
 			return response.json();
@@ -32,3 +31,5 @@ const feedback = (def, userGuess, submit, yesNo) => {
 		}
 	};
 };
+
+

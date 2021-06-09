@@ -1,2 +1,2 @@
-/.replit
-/node_modules
+pyproject.toml
+poetry.lock
