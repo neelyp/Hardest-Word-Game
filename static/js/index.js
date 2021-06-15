@@ -24,12 +24,12 @@ const feedback = (def, userGuess, submit, yesNo) => {
 	submit.onclick = () => {
 		if (userGuess.value == def['0']['word']) {
 			yesNo.innerHTML = `<p class='feedback'>Correct! The word was ${def['0']['word']}</p>`;
-			start();
+			feedbackLeave(yesNo);
 		} else {
 			yesNo.innerHTML = `<p class='feedback'>Wrong! The word was ${def['0']['word']}</p>`;
-			start();
+			feedbackLeave(yesNo)
 		}
 	};
 };
 
-
+feedbackLeave = (yesNo) => setTimeout(() => yesNo.innerHTML = '<p></p>', 1500)
