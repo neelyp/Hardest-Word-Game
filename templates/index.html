@@ -3,9 +3,12 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="description"
+	content="A web game that gives the definition of a random word and the user has to guess the word it goes with.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>World's Hardest Word Game</title>
 
+	<!-- favicon stuff -->
 	<link rel="apple-touch-icon" sizes="180x180"
 		href="{{ url_for('static', filename='/img/favicon/apple-touch-icon.png') }}">
 	<link rel="icon" type="image/png" sizes="32x32"
@@ -14,13 +17,20 @@
 		href="{{ url_for('static', filename='/img/favicon/favicon-16x16.png') }}">
 	<link rel="manifest" href="{{ url_for('static', filename='/img/favicon/site.webmanifest') }}">
 
+	<!-- normal css -->
 	<link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='/css/loader.css') }}">
+
+	<!-- fontawesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
 		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+	<!-- js stuff -->
 	<script src="{{ url_for('static', filename='/js/websiteLoader.js') }}">
-
 	</script>
+
+	<!-- pass api url from server to client -->
 	<script type="text/javascript">
 		var apiUrl = {{ api | tojson}}
 	</script>
@@ -45,10 +55,13 @@
 		</span>
 
 		<div id="yes-no"></div>
+		
+		<br>
+		<form action="{{ url_for('submit') }}" method="post">
+			<input type="text" class="score" placeholder="just a test" name="score", id = "score"></input>
+			<input type="submit" value="save" class="guessButton"></input>
+		</form>
 	</div>
-
-	<div class="credit">Favicon made by <a class="link" href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
-			class="link" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 </body>
 
 </html>

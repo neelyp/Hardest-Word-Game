@@ -19,16 +19,7 @@ body {
   font: 'Roboto Mono';
   font-size: 3em;
   font-weight: 900;
-  margin-right: 5%;
   font-stretch: expanded;
-}
-
-.head:hover span {
-  display: none;
-}
-
-.head:hover:before {
-  content: 'Formidable Lexicon';
 }
 
 .text-box {
@@ -39,18 +30,17 @@ body {
   border: none;
   outline: none;
   padding: 0.7em;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .guessButton {
   height: 70%;
+	cursor: pointer;
   width: auto;
   border-radius: 0.3em;
   background-color: #edf6ff;
   border: none;
   outline: none;
   padding: 0.7em;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .guessButton:hover {
@@ -61,65 +51,10 @@ body {
   border: none;
   outline: none;
   padding: 0.7em;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
-.spinny {
-  animation: spinny 0.7s linear infinite;
-}
-
-@keyframes spinny {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.loader {
-  position: fixed;
-  z-index: 99;
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loader.hidden {
-  animation: fade-out 1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fade-out {
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-.loader > img {
-  width: 300px;
-  height: 300px;
-}
-
-.credit {
-  position: absolute;
-  bottom: 1px;
-  left: 50px;
-  right: 50px;
-  text-align: center;
-}
-
-a {
-  font-weight: bold;
-  -webkit-transition: color 1s;
-  transition: color 1s;
-  text-decoration: none;
-  color: #0000ff;
-}
-
-a:hover {
-  color: #c2b861;
+.log-in {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
