@@ -32,4 +32,7 @@ const feedback = (def, userGuess, submit, yesNo) => {
 	};
 };
 
-feedbackLeave = (yesNo) => setTimeout(() => yesNo.innerHTML = '<p></p>', 1500)
+feedbackLeave = (yesNo) => setTimeout(() => {
+	yesNo.innerHTML = '<p></p>';
+	start();
+}, 1500);
