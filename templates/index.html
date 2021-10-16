@@ -1,67 +1,149 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
+
+
 <head>
+	{% if user_name %}
+
 	<meta charset="UTF-8">
-	<meta name="description"
-	content="A web game that gives the definition of a random word and the user has to guess the word it goes with.">
+
+	<meta name="description" content="A web game that gives the definition of a random word and the user has to guess the word it goes with.">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>World's Hardest Word Game</title>
+
+	<title>World's Hardest Word Game
+	</title>
+
 
 	<!-- favicon stuff -->
-	<link rel="apple-touch-icon" sizes="180x180"
-		href="{{ url_for('static', filename='/img/favicon/apple-touch-icon.png') }}">
-	<link rel="icon" type="image/png" sizes="32x32"
-		href="{{ url_for('static', filename='/img/favicon/favicon-32x32.png') }}">
-	<link rel="icon" type="image/png" sizes="16x16"
-		href="{{ url_for('static', filename='/img/favicon/favicon-16x16.png') }}">
+
+
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='/img/favicon/apple-touch-icon.png') }}">
+
+
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='/img/favicon/favicon-32x32.png') }}">
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='/img/favicon/favicon-16x16.png') }}">
+
+
 	<link rel="manifest" href="{{ url_for('static', filename='/img/favicon/site.webmanifest') }}">
 
+
 	<!-- normal css -->
+
+
 	<link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
-	<link rel="stylesheet" href="{{ url_for('static', filename='/css/loader.css') }}">
+
 
 	<!-- fontawesome -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	
-	<!-- js stuff -->
-	<script src="{{ url_for('static', filename='/js/websiteLoader.js') }}">
-	</script>
 
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+	 crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+	<!-- js stuff -->
+
+	<script src="{{ url_for('static', filename='/js/websiteLoader.js') }}">
+
+	</script>
 	<!-- pass api url from server to client -->
+
 	<script type="text/javascript">
 		var apiUrl = {{ api | tojson}}
 	</script>
+
 	<script src="{{ url_for('static', filename='/js/index.js') }}">
 
 	</script>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+
+	</script>
+
 </head>
 
-<body onload="start()">
-	<div class="loader">
-		<p><i class="fas fa-circle-notch spinny loading"></i> Loading...</p>
-		<br>
-	</div>
-	<div class="top" id="top" style="text-align: center;">
-		<p class="head" id="head"><span>Strenuous Vocabulary<span></p>
-	</div>
-	<div style="text-align: center;">
-		<p id="def"></p>
-		<span>
-			<input type="text" id="userGuess" class="text-box" placeholder="Enter word here...">
-			<input type="button" value="Enter" id="submit" class="guessButton">
-		</span>
 
-		<div id="yes-no"></div>
-		
+
+<body onload="start()">
+
+
+	<div class="loader">
+
+
+		<p><i class="fas fa-circle-notch spinny loading"></i> Loading...</p>
+
 		<br>
-		<form action="{{ url_for('submit') }}" method="post">
-			<input type="text" class="score" placeholder="just a test" name="score", id = "score"></input>
-			<input type="submit" value="save" class="guessButton"></input>
-		</form>
+
 	</div>
+
+
+	<div class="main" id="main">
+
+
+		<div class="top" id="top" style="text-align: center;">
+
+
+			<p class="head" id="head">
+
+				<span>World's Hardest Word Game
+
+					<span>
+			</p>
+
+		</div>
+
+
+		<div style="text-align: center;">
+
+
+			<div class="def_container">
+
+				<p id="def"></p>
+			</div>
+
+
+			<span>
+
+				<input type="text" id="userGuess" class="text-box" placeholder="Enter word here...">
+
+				<input type="button" value="Enter" id="submit" class="guessButton">
+
+			</span>
+
+
+
+			<div id="yes-no">
+			</div>
+
+
+			<br>
+
+
+			
+
+			<button onclick="toggleLeaderboard()" class="toggle">Toggle Leaderboard</button>
+		
+
+			<div style="display: none;" class="leaderboard" id="leader-board">{{leaderboard | safe}}</div>
+		
+		</div>
+
+	</div>
+	{% else %}
+
+
+	<div class="center-div">
+
+		<script authed="location.reload()" src="https://auth.turbio.repl.co/script.js">
+		</script>
+
+	</div>
+	{% endif %}
+
 </body>
 
 </html>

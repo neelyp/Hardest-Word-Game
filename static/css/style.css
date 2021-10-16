@@ -1,12 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 
+.spinny {
+  animation: spinny 0.7s linear infinite;
+}
+
+@keyframes spinny {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  position: fixed;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader.hidden {
+  animation: fade-out 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-out {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loader > img {
+  width: 300px;
+  height: 300px;
+}
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.main {
+	text-align: center;
+}
+
 .top {
-  margin-bottom: 5%;
-  margin-left: 2%;
   overflow: hidden;
 }
 
@@ -57,4 +99,45 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.toggle {
+	height: auto;
+	cursor: pointer;
+  width: auto;
+  border-radius: 0.3em;
+  background-color: #edf6ff;
+  border: none;
+  outline: none;
+  padding: 0.7em;
+	margin-bottom: 1.5%;
+}
+
+.toggle:hover {
+	height: auto;
+  width: auto;
+  border-radius: 0.3em;
+  background-color: #a3d3ff;
+  border: none;
+  outline: none;
+  padding: 0.7em;
+	margin-bottom: 1.5%;
+}
+
+.tile {
+	height: auto;
+  width: 20%;
+  border-radius: 0.3em;
+  background-color: #edf6ff;
+  border: none;
+  outline: none;
+  padding: 0.25em;
+	margin: auto;
+	margin-bottom: 0.5%;
+}
+
+.leaderboard {
+	height: 55vh;
+	position: relative;
+	overflow: scroll;
 }
